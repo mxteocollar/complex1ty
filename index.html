@@ -1,0 +1,145 @@
+<!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complex1ty Plugins</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d0d0d;
+      color: #ffffff;
+    }header {
+  background: linear-gradient(90deg, #00cfff, #0077ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+  text-align: center;
+  padding: 20px 0;
+  font-weight: 900;
+  animation: hueRotate 10s linear infinite;
+}
+
+@keyframes hueRotate {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.plugin-box {
+  background: #111;
+  color: #fff;
+  margin: 20px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #00cfff4d;
+  transition: all 0.3s ease;
+}
+
+.plugin-header {
+  padding: 15px 20px;
+  background: #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.plugin-header:hover {
+  background: #222;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.plugin-box.active .arrow {
+  transform: rotate(180deg);
+}
+
+.plugin-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 20px;
+}
+
+.plugin-box.active .plugin-body {
+  max-height: 400px;
+  padding: 20px;
+}
+
+.plugin-extra {
+  margin-top: 10px;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: linear-gradient(135deg, #00cfff, #0077ff);
+  padding: 10px 16px;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+  background: linear-gradient(135deg, #0077ff, #00cfff);
+}
+
+footer {
+  text-align: center;
+  padding: 30px 0;
+  color: #888;
+}
+
+footer a {
+  color: #00cfff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+  </style>
+</head>
+<body>
+  <header>Complex1ty Plugins</header>
+  <div class="container">
+    <div class="plugin-box">
+      <div class="plugin-header" onclick="toggleBox(this)">
+        <h2>SurvivalBasicS</h2>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="plugin-body">
+        <p>Comandos básicos para servidores Survival: /near, /back, /coords, /heal...</p>
+        <div class="plugin-extra">
+          <p><strong>Autor:</strong> complex1ty</p>
+          <p><strong>Versión:</strong> 1.0.0</p>
+          <p><strong>Comandos:</strong> /near, /back, /coords, /heal, /feed, /spawn, /setspawn, /fix, /sbs</p>
+          <a href="https://tpi.li/SurvivalBasicS" class="download-btn" target="_blank">Descargar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>© 2025 Complex1ty Dev</p>
+    <p>
+      <a href="https://youtube.com/@complex1tydev" target="_blank">YouTube</a> |
+      <a href="https://discordapp.com/users/complex1tydev_" target="_blank">Discord</a>
+    </p>
+  </footer>
+  <script>
+    function toggleBox(el) {
+      const box = el.closest(".plugin-box");
+      box.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
